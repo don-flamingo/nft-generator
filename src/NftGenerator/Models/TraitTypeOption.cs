@@ -33,9 +33,9 @@ namespace NftGenerator.Models
         public bool Notable { get; private set; }
         public ICollection<TraitOption> TraitOptions { get; private set; } = new List<TraitOption>();
 
-        public void AddTrait(string file, TraitTypeOption traitTypeOption)
+        public void AddTrait(string file)
         {
-            TraitOptions.Add(new TraitOption(file, traitTypeOption));
+            TraitOptions.Add(new TraitOption(file, this));
         }
     }
 }
