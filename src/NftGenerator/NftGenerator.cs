@@ -4,18 +4,33 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using NftGenerator.Extensions;
 using NftGenerator.Models;
+using NftGenerator.Serializator;
 
 namespace NftGenerator
 {
     public class NftGenerator
     {
-        public ICollection<Nft> Generate(string outputDir, ICollection<TraitTypeOption> traitTypeDirs, TraitTypeOption background = null)
+        public ICollection<Nft> Generate(string outputDir,
+            int size,
+            string imageUrlTemplate,
+            string externalUrlTemplate,
+            string description,
+            int height,
+            int width,
+            int id,
+            ICollection<TraitTypeOption> traitTypeDirs,
+            ICollection<NftTrait> baseProperties)
         {
             var nfts = new List<Nft>();
-            var id = 1;
-            var size = 2500;
+            var jsonOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = new SnakeCaseNamingPolicy(),
+                WriteIndented = true,
+                IgnoreNullValues = true
+            };
 
             var dict = traitTypeDirs
                 .ToDictionary(x => x,
@@ -26,12 +41,9 @@ namespace NftGenerator
 
             var alls = traitOptionsLists
                 .Select(x => x.AsEnumerable())
-                .CartesianProduct(size)
-                .OrderByDescending(x => Guid.NewGuid())
-                .Take(size)
-                .ToList();
+                .CartesianProduct(size);
 
-            var traitsCount = traitTypeDirs.Sum(x => x.TraitOptions.Count()) + background?.TraitOptions.Count() ?? 0;
+            var traitsCount = traitTypeDirs.Sum(x => x.TraitOptions.Count);
 
             Console.WriteLine($"Traits count {traitsCount}");
 
@@ -39,24 +51,13 @@ namespace NftGenerator
             {
                 Console.WriteLine(id);
 
-                var nft = new Nft(id, new Dictionary<string, string>());
                 var img = null as Image;
                 var g = null as Graphics;
-
-                if (background != null)
-                {
-                    var backgroundTrait = background.TraitOptions
-                        .OrderBy(x => Guid.NewGuid())
-                        .First();
-
-                    img = Image.FromFile(backgroundTrait.FilePath);
-                    g = Graphics.FromImage(img);
-
-                    if (backgroundTrait.TraitTypeOption.Notable)
-                    {
-                        nft.Properties.Add(backgroundTrait.TraitTypeOption.Name, backgroundTrait.Name);
-                    }
-                }
+                var nft = new Nft(id,
+                    imageUrlTemplate.Replace("{id}", id.ToString()),
+                    externalUrlTemplate.Replace("{id}", id.ToString()),
+                    description,
+                    new List<NftTrait>(baseProperties));
 
                 foreach (var trait in traits.Where(x => x != null))
                 {
@@ -72,7 +73,7 @@ namespace NftGenerator
 
                     if (trait.TraitTypeOption.Notable)
                     {
-                        nft.Properties.Add(trait.TraitTypeOption.Name, trait.Name);
+                        nft.Traits.Add(new NftTrait(trait.TraitTypeOption.Name, trait.Name));
                     }
                 }
 
@@ -81,7 +82,16 @@ namespace NftGenerator
                     continue;
                 }
 
-                img.Save(Path.Combine(outputDir, $"{id++}.png"), ImageFormat.Png);
+                var jsonPath = Path.Combine(outputDir, $"{id}.json");
+                var json = JsonSerializer.Serialize(nft, jsonOptions);
+                var imgPath = Path.Combine(outputDir, $"{id++}.png");
+
+                File.WriteAllText(jsonPath, json);
+
+                // var resizedImg = img.GetThumbnailImage(width, height, null,IntPtr.Zero);
+                img.Save(imgPath, ImageFormat.Png);
+
+              //  resizedImg.Dispose();
                 img.Dispose();
 
                 nfts.Add(nft);
@@ -89,6 +99,5 @@ namespace NftGenerator
 
             return nfts;
         }
-
     }
 }

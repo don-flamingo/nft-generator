@@ -17,23 +17,16 @@ namespace NftGenerator.Extensions
                     .Select(trait => trait.OrderByDescending(x => Guid.NewGuid())
                         .First());
 
-                if (!tab.Any(s => s.SequenceEqual(set)))
+                if (tab.Any(s => s.SequenceEqual(set)))
                 {
-                    tab.Add(set);
-                    i++;
+                    continue;
                 }
+
+                tab.Add(set);
+                i++;
+
+                yield return set;
             }
-
-            return tab;
-
-            IEnumerable<IEnumerable<T>> emptyProduct = new[] { Enumerable.Empty<T>() };
-            return sequences.Aggregate(
-                emptyProduct,
-                (accumulator, sequence) =>
-                    from accseq in accumulator
-                    from item in sequence
-                    select accseq.Concat(new[] { item })
-            );
         }
     }
 }
