@@ -6,6 +6,7 @@ namespace NftGenerator.Models
     {
         public Nft(
             int id,
+            string name,
             string image,
             string externalLink,
             string description,
@@ -14,7 +15,7 @@ namespace NftGenerator.Models
             Id = id;
             Traits = traits;
             Description = description;
-            Name = $"#{id}";
+            Name = name;
             ExternalLink = externalLink;
             Image = image;
         }
@@ -29,13 +30,16 @@ namespace NftGenerator.Models
 
     public class NftTrait
     {
-        public NftTrait(string traitType, string value)
+        public NftTrait(string traitType, object value, string displayType = null)
         {
             TraitType = traitType;
             Value = value;
+            DisplayType = displayType;
         }
 
         public string TraitType { get; private set; }
-        public string Value { get; private set; }
+        public object Value { get; private set; }
+        public string DisplayType { get; private set; }
+
     }
 }

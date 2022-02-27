@@ -1,0 +1,446 @@
+[
+  {
+    "name": "Beak",
+    "traits": [
+      {
+        "name": "Angry",
+        "skills": {
+          "Charisma": 3
+        }
+      },
+      {
+        "name": "Beak with fish",
+        "skills": {
+          "Charisma": 1,
+          "Drugs tolerance": 2
+        }
+      },
+      {
+        "name": "Blue",
+        "skills": {
+          "Charisma": 2,
+          "Drugs tolerance": 2
+        }
+      },
+      {
+        "name": "Gas mask",
+        "skills": {
+          "Charisma": 4,
+          "Drugs tolerance": 7
+        }
+      },      
+      {
+        "name": "Silver gas mask",
+        "skills": {
+          "Charisma": 10,
+          "Drugs tolerance": 9,
+          "Strength": 4
+        }
+      },      
+      {
+        "name": "Gold gas mask",
+        "skills": {
+          "Charisma": 10,
+          "Drugs tolerance": 9,
+          "Strength": 10,
+          "Accuracy": 6
+        }
+      },
+      {
+        "name": "Gold tooth",
+        "skills": {
+          "Charisma": 10,
+          "Drugs tolerance": 1
+        }
+      },
+      {
+        "name": "Mechanic",
+        "skills": {
+          "Charisma": 2,
+          "Drugs tolerance": 4,
+          "Strength": 4
+        }
+      },
+      {
+        "name": "Open beak",
+        "skills": {
+          "Charisma": 8,
+          "Drugs tolerance": 2
+        }
+      },
+      {
+        "name": "Open pircing beak",
+        "skills": {
+          "Charisma": 9,
+          "Drugs tolerance": 3,
+          "Strength": 3
+        }
+      },
+      {
+        "name": "Red smoking cigar",
+        "skills": {
+          "Charisma": 9,
+          "Drugs tolerance": 9
+        }
+      },
+      {
+        "name": "Smoking cigar",
+        "skills": {
+          "Charisma": 3,
+          "Drugs tolerance": 2
+        }
+      }
+    ]
+  },
+  {
+    "name": "Weapon",
+    "traits": [
+      {
+        "name": "Axe",
+        "skills": {
+          "Strength": 2
+        }
+      },     
+      {
+        "name": "Silver axe",
+        "skills": {
+          "Strength": 7
+        }
+      },      
+      {
+        "name": "Silver scythe",
+        "skills": {
+          "Strength": 10,
+          "Armor": 5
+        }
+      },      
+      {
+        "name": "Silver grenade",
+        "skills": {
+          "Strength": 10,
+          "Armor": 5,
+          "Accuracy": 7
+        }
+      },
+      {
+        "name": "Grende",
+        "skills": {
+          "Strength": 5
+        }
+      },
+      {
+        "name": "Cutlass",
+        "skills": {
+          "Strength": 3
+        }
+      },
+      {
+        "name": "Fish weapon",
+        "skills": {
+          "Strength": 1,
+          "Accuracy": 1
+        }
+      },
+      {
+        "name": "Gun",
+        "skills": {
+          "Strength": 4,
+          "Accuracy": 4
+        }
+      },
+      {
+        "name": "Knife",
+        "skills": {
+          "Strength": 1
+        }
+      },
+      {
+        "name": "Rifle",
+        "skills": {
+          "Strength": 7,
+          "Accuracy": 4
+        }
+      },
+      {
+        "name": "Scythe",
+        "skills": {
+          "Strength": 7
+        }
+      },
+      {
+        "name": "Stick",
+        "skills": {
+          "Strength": 4
+        }
+      },
+      {
+        "name": "Throw",
+        "skills": {
+          "Strength": 1
+        }
+      },
+      {
+        "name": "Gold axe",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 2,
+          "Drugs tolerance": 5
+        }
+      },
+      {
+        "name": "Gold cutlass",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 5
+        }
+      },      
+      {
+        "name": "Gold fish weapon",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      },      
+      {
+        "name": "Gold grenade",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      },      
+      {
+        "name": "Gold gun",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      },      
+      {
+        "name": "Gold rifle",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      },      
+      {
+        "name": "Gold scythe",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      },      
+      {
+        "name": "Gold stick",
+        "skills": {
+          "Strength": 10,
+          "Armor": 10,
+          "Accuracy": 10,
+          "Charisma": 10,
+          "Drugs tolerance": 10
+        }
+      }
+    ]
+  },
+  {
+    "name": "Eyes or glasses",
+    "traits": [
+      {
+        "name": "Angry eyes",
+        "skills": {
+          "Charisma": 1,
+          "Accuracy": 4
+        }
+      },
+      {
+        "name": "Cyber eye",
+        "skills": {
+          "Armor": 1,
+          "Accuracy": 3
+        }
+      },
+      {
+        "name": "Laser eyes",
+        "skills": {
+          "Drugs tolerance": 1,
+          "Charisma": 3,
+          "Accuracy": 7
+        }
+      },
+      {
+        "name": "Purple glasses",
+        "skills": {
+          "Charisma": 3,
+          "Accuracy": 8
+        }
+      }
+    ]
+  },
+  {
+    "name": "Head",
+    "traits": [
+      {
+        "name": "Blond medium hair",
+        "skills": {
+          "Charisma": 1
+        }
+      },
+      {
+        "name": "Cyber-rock hair",
+        "skills": {
+          "Drugs tolerance": 1,
+          "Strength": 1
+        }
+      },
+      {
+        "name": "Helmet",
+        "skills": {
+          "Armor": 2
+        }
+      },
+      {
+        "name": "Metal head",
+        "skills": {
+          "Armor": 1,
+          "Accuracy": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Outfit",
+    "traits": [
+      {
+        "name": "Blue hoodie",
+        "skills": {
+          "Armor": 2
+        }
+      },
+      {
+        "name": "Captain coat",
+        "skills": {
+          "Drugs tolerance": 2,
+          "Armor": 4,
+          "Charisma": 3
+        }
+      },
+      {
+        "name": "Cyber gothic",
+        "skills": {
+          "Drugs tolerance": 3,
+          "Armor": 5
+        }
+      },      
+      {
+        "name": "Silver soldier armor",
+        "skills": {
+          "Drugs tolerance": 3,
+          "Armor": 10,
+          "Strength": 10
+        }
+      },      
+      {
+        "name": "Silver matrix turtleneck",
+        "skills": {
+          "Drugs tolerance": 6,
+          "Armor": 10
+        }
+      },      
+      {
+        "name": "Silver lovely shirt",
+        "skills": {
+          "Drugs tolerance": 10,
+          "Armor": 7
+        }
+      },
+      {
+        "name": "Solder armor",
+        "skills": {
+          "Strength": 4,
+          "Armor": 8
+        }
+      },
+      {
+        "name": "Warrior vest",
+        "skills": {
+          "Strength": 2,
+          "Armor": 4
+        }
+      },
+      {
+        "name": "Pink lovely shirt",
+        "skills": {
+          "Drugs tolerance": 3,
+          "Armor": 1
+        }
+      },
+      {
+        "name": "Sweater",
+        "skills": {
+          "Strength": 2,
+          "Armor": 3
+        }
+      },
+      {
+        "name": "Mechanic vest",
+        "skills": {
+          "Drugs tolerance": 3,
+          "Armor": 3
+        }
+      },      
+      {
+        "name": "Gold hoodie",
+        "skills": {
+          "Drugs tolerance": 7,
+          "Accuracy": 4,
+          "Armor": 10
+        }
+      },     
+      {
+        "name": "Gold lovely shirt",
+        "skills": {
+          "Drugs tolerance": 10,
+          "Armor": 10,
+          "Accuracy": 7
+        }
+      },      
+      {
+        "name": "Gold soldier armor",
+        "skills": {
+          "Drugs tolerance": 10,
+          "Armor": 10,
+          "Accuracy": 7,
+          "Strength": 10
+        }
+      },      
+      {
+        "name": "Gold warrior vest",
+        "skills": {
+          "Drugs tolerance": 2,
+          "Armor": 10,
+          "Accuracy": 7,
+          "Strength": 10
+        }
+      }
+    ]
+  }
+]
